@@ -1,0 +1,28 @@
+*,
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 5000px;
+}
+
+.jumbotron{
+    background-color: #eddfd7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron img{
+    margin: 20px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(79, 58, 27);
+}
+
+#project{
+    background-color: #F7DED0;
+}
