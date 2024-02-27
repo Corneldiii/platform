@@ -21,19 +21,31 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col">
-                    <div class="screen p-4">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1" style="color: white;" >Nama Anda :</label>
-                                <input type="text" class="form-control" id="exampleInputName1"
-                                    aria-describedby="emailHelp" placeholder="Masukan Nama Anda">
+                    <div class="screen p-4" id="perubahan">
+                        <div class="row">
+                            <div class="col">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1" style="color: white;" >Nama Anda :</label>
+                                        <input type="text" class="form-control form-control-sm" id="exampleInputName1"
+                                            aria-describedby="emailHelp" placeholder="Masukan Nama Anda ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1" style="color: white;">Jumlah : </label>
+                                        <input type="number" class="form-control form-control-sm" id="exampleInputJumlah1" placeholder="Jumlah Masukan">
+                                    </div>
+                                    <button type="button" class="btn btn-primary mt-4 " id="button">Submit</button>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1" style="color: white;">Jumlah : </label>
-                                <input type="number" class="form-control" id="exampleInputJumlah1" placeholder="Jumlah Masukan">
+                        </div>
+
+                        <div class="row mt-5 " >
+                            <div class="col" id="input">
+                               
                             </div>
-                            <button type="submit" class="btn btn-primary mt-4 " onclick="test()">Submit</button>
-                        </form>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
