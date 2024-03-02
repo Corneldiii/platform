@@ -26,29 +26,59 @@
                             <div class="col">
                                 <form>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" style="color: white;" >Nama Anda :</label>
+                                        <label for="exampleInputEmail1" style="color: white;">Nama Anda :</label>
                                         <input type="text" class="form-control form-control-sm" id="exampleInputName1"
                                             aria-describedby="emailHelp" placeholder="Masukan Nama Anda ">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1" style="color: white;">Jumlah : </label>
-                                        <input type="number" class="form-control form-control-sm" id="exampleInputJumlah1" placeholder="Jumlah Masukan">
+                                        <input type="number" class="form-control form-control-sm"
+                                            id="exampleInputJumlah1" placeholder="Jumlah Masukan">
                                     </div>
                                     <button type="button" class="btn btn-primary mt-4 " id="button">Submit</button>
                                 </form>
                             </div>
-                        </div>
 
-                        <div class="row mt-5 " >
+                        </div>
+                        <div class="row mt-5 ">
                             <div class="col" id="input">
-                               
+
                             </div>
                         </div>
+                    </div>
 
-
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div id="mdl" style="justify-content: center; align-items: center; display: none; margin-top: -100px;" >
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#myModal" style="width: 80%;">
+                                    Submit Final
+                                </button>
+                            </div>
+                            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Hasil Akhir</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" id="mdlBody">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 

@@ -57,18 +57,19 @@ btn.addEventListener('click', function () {
             }
             if (inputPil[0] !== '') {
                 var form = document.createElement('div');
-                form.className = 'form-group mt-3';
+                form.className = 'form-group mt-5';
                 form.style.display = 'flex';
                 form.style.flexDirection = 'column';
                 form.style.gap = '10px';
 
-                var inputPage  = document.createElement('div');
-                inputPage.className = 'form-group';
-                inputPage.style.display = 'flex';
-                inputPage.style.gap = '10px';
 
                 for (var i = 0; i < jum; i++) {
                     console.log("masuk")
+                    var inputPage = document.createElement('div');
+                    inputPage.className = 'form-group';
+                    inputPage.style.display = 'flex';
+                    inputPage.style.gap = '5px';
+                    inputPage.style.marginBottom = '20px';
 
                     var inputradio = document.createElement('input');
                     inputradio.type = 'radio';
@@ -77,20 +78,71 @@ btn.addEventListener('click', function () {
                     inputradio.value = inputPil[i];
 
                     var lbl = document.createElement('label');
-                    lbl.setAttribute('for', 'Radiobtn'+(i+1));
+                    lbl.setAttribute('for', 'Radiobtn' + (i + 1));
                     lbl.style.color = 'white';
                     lbl.textContent = inputPil[i];
-                    
+
 
                     inputPage.appendChild(inputradio);
                     inputPage.appendChild(lbl);
 
                     form.appendChild(inputPage);
-    
-                    container.appendChild(form);
+
                 }
                 ubahTinggi();
+                container.appendChild(form);
+
+
+                var mdalBtn = document.getElementById('mdl');
+
+                mdalBtn.style.display = 'flex';
+                mdalBtn.style.position = 'relative';
+                mdalBtn.style.zIndex = 1;
+
+                var mdlB = document.getElementById('mdlBody');
+                mdlB.innerHTML = '';
+
+                mdalBtn.addEventListener('click', function () {
+                    var text = document.createElement('p');
+                    text.textContent = 'Halo Nama saya ' + nama + ' memiliki '+jum+' pilihan';
+
+                    mdlB.appendChild(text);
+
+                    for (let index = 0; index < jum; index++) {
+                        var text2 = document.createElement('p');
+                        text2.textContent = '- '+inputPil[index];
+                        mdlB.appendChild(text2);
+                    }
+
+                    var text3 = document.createElement('p');
+                    let pilihan = '';
+
+                    
+
+                    for (let index = 0; index < jum; index++) {
+                        var radio = document.getElementById('Radiobtn'+(index+1));
+
+                        if(radio.checked){
+                            pilihan = radio.value;
+                        }
+                        
+                    }
+
+                    text3.textContent = 'Dan saya memilih '+pilihan;
+                    mdlB.appendChild(text3);
+
+                    
+
+
+
+
+                });
+
             }
+
+
+
+
 
         });
     } else {
@@ -101,6 +153,5 @@ btn.addEventListener('click', function () {
 
 function ubahTinggi() {
     screen.style.height = 'fit-content';
-    
 }
 
