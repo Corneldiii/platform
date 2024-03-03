@@ -14,7 +14,6 @@ btn.addEventListener('click', function () {
 
         container.innerHTML = '';
 
-
         for (var i = 0; i < jum; i++) {
             var formGroup = document.createElement('div');
             formGroup.className = 'form-group';
@@ -62,7 +61,6 @@ btn.addEventListener('click', function () {
                 form.style.flexDirection = 'column';
                 form.style.gap = '10px';
 
-
                 for (var i = 0; i < jum; i++) {
                     console.log("masuk")
                     var inputPage = document.createElement('div');
@@ -82,7 +80,6 @@ btn.addEventListener('click', function () {
                     lbl.style.color = 'white';
                     lbl.textContent = inputPil[i];
 
-
                     inputPage.appendChild(inputradio);
                     inputPage.appendChild(lbl);
 
@@ -91,7 +88,6 @@ btn.addEventListener('click', function () {
                 }
                 ubahTinggi();
                 container.appendChild(form);
-
 
                 var mdalBtn = document.getElementById('mdl');
 
@@ -103,47 +99,35 @@ btn.addEventListener('click', function () {
                 mdlB.innerHTML = '';
 
                 mdalBtn.addEventListener('click', function () {
+                    for (let index = 0; index < jum; index++) {
+                        var radio = document.getElementById('Radiobtn' + (index + 1));
+
+                        if (radio.checked) {
+                            pilihan = radio.value;
+                        }else{
+                            alert('Toloh pilih terlebih dahulu!!!');
+                        }
+                    }
                     var text = document.createElement('p');
-                    text.textContent = 'Halo Nama saya ' + nama + ' memiliki '+jum+' pilihan';
+                    text.textContent = 'Halo Nama saya ' + nama + ' memiliki ' + jum + ' pilihan';
 
                     mdlB.appendChild(text);
 
                     for (let index = 0; index < jum; index++) {
                         var text2 = document.createElement('p');
-                        text2.textContent = '- '+inputPil[index];
+                        text2.textContent = '- ' + inputPil[index];
                         mdlB.appendChild(text2);
                     }
 
                     var text3 = document.createElement('p');
                     let pilihan = '';
 
-                    
-
-                    for (let index = 0; index < jum; index++) {
-                        var radio = document.getElementById('Radiobtn'+(index+1));
-
-                        if(radio.checked){
-                            pilihan = radio.value;
-                        }
-                        
-                    }
-
-                    text3.textContent = 'Dan saya memilih '+pilihan;
+                    text3.textContent = 'Dan saya memilih ' + pilihan;
                     mdlB.appendChild(text3);
-
-                    
-
-
-
-
                 });
-
+            }else{
+                alert('Tolong Masukan nilai kedalam pilihan anda!!!!');
             }
-
-
-
-
-
         });
     } else {
         alert('Please enter the value first!!!');
@@ -154,4 +138,3 @@ btn.addEventListener('click', function () {
 function ubahTinggi() {
     screen.style.height = 'fit-content';
 }
-
