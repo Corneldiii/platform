@@ -97,6 +97,7 @@ btn.addEventListener('click', function () {
 
                 var mdlB = document.getElementById('mdlBody');
                 mdlB.innerHTML = '';
+                let pilihan = '';
 
                 mdalBtn.addEventListener('click', function () {
                     for (let index = 0; index < jum; index++) {
@@ -120,7 +121,7 @@ btn.addEventListener('click', function () {
                     }
 
                     var text3 = document.createElement('p');
-                    let pilihan = '';
+                    
 
                     text3.textContent = 'Dan saya memilih ' + pilihan;
                     mdlB.appendChild(text3);
