@@ -9,7 +9,7 @@ body {
 }
 
 .jumbotron{
-    background-color: #eddfd7;
+    background-color: #804a4a;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,4 +25,19 @@ body {
 
 #project{
     background-color: #F7DED0;
+    
+}
+
+#con-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactme{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    width: 500px;
+    height: 500px;
 }

@@ -98,32 +98,43 @@ btn.addEventListener('click', function () {
                 var mdlB = document.getElementById('mdlBody');
                 mdlB.innerHTML = '';
 
+                let pilihan = '';
+
                 mdalBtn.addEventListener('click', function () {
                     for (let index = 0; index < jum; index++) {
                         var radio = document.getElementById('Radiobtn' + (index + 1));
 
                         if (radio.checked) {
                             pilihan = radio.value;
-                        }else{
-                            alert('Toloh pilih terlebih dahulu!!!');
                         }
                     }
-                    var text = document.createElement('p');
-                    text.textContent = 'Halo Nama saya ' + nama + ' memiliki ' + jum + ' pilihan';
+                    var mymdl = document.getElementById('modalTest');
 
-                    mdlB.appendChild(text);
+                    if(pilihan == '') {
+                        mymdl.style.display= 'none';
+                        alert('Toloh pilih terlebih dahulu!!!');
 
-                    for (let index = 0; index < jum; index++) {
-                        var text2 = document.createElement('p');
-                        text2.textContent = '- ' + inputPil[index];
-                        mdlB.appendChild(text2);
+                    }else{
+
+
+                        var text = document.createElement('p');
+                        text.textContent = 'Halo Nama saya ' + nama + ' memiliki ' + jum + ' pilihan';
+    
+                        mdlB.appendChild(text);
+    
+                        for (let index = 0; index < jum; index++) {
+                            var text2 = document.createElement('p');
+                            text2.textContent = '- ' + inputPil[index];
+                            mdlB.appendChild(text2);
+                        }
+    
+                        var text3 = document.createElement('p');
+                        
+    
+                        text3.textContent = 'Dan saya memilih ' + pilihan;
+                        mdlB.appendChild(text3);
                     }
 
-                    var text3 = document.createElement('p');
-                    let pilihan = '';
-
-                    text3.textContent = 'Dan saya memilih ' + pilihan;
-                    mdlB.appendChild(text3);
                 });
             }else{
                 alert('Tolong Masukan nilai kedalam pilihan anda!!!!');
