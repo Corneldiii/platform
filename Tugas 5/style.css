@@ -36,6 +36,7 @@ h5{
 }
 
 #link-forgot{
+    margin-top: 10px;
     color: white;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
@@ -43,7 +44,7 @@ h5{
 
 #link-forgot:hover{
     
-    color: rgb(161, 58, 58);
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -101,3 +102,5 @@ h5{
     font-size: 10;
     color: red;
 }
+
+
