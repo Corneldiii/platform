@@ -36,6 +36,7 @@ h5{
 }
 
 #link-forgot{
+    margin-top: 10px;
     color: white;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
@@ -43,7 +44,7 @@ h5{
 
 #link-forgot:hover{
     
-    color: rgb(161, 58, 58);
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
@@ -101,3 +102,31 @@ h5{
     font-size: 10;
     color: red;
 }
+
+
+#todo-page{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#listpg{
+    border-radius: 10px;
+    gap: 10px;
+    width: 500px;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    box-shadow: rgb(107, 84, 84) 20px 20px 70px;
+}
+
+#listdaftar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
