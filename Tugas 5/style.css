@@ -113,18 +113,13 @@ h5{
 
 }
 
-.daftar{
-    display: flex;
-}
-
-
 #listpg{
     border-radius: 10px;
     gap: 10px;
     width: 500px;
     backdrop-filter: blur(20px);
     padding: 20px;
-    box-shadow: rgb(54, 42, 42) 20px 20px 70px;
+    box-shadow: rgb(107, 84, 84) 20px 20px 70px;
 }
 
 #listdaftar{
@@ -133,4 +128,5 @@ h5{
     justify-content: center;
     align-items: center;
 }
+
 

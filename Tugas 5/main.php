@@ -35,7 +35,55 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    
+
+    <style>
+        .bungkus {
+            border-radius: 10px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            backdrop-filter: blur(50px);
+            box-shadow: rgb(107, 84, 84) 20px 20px 70px;
+            width: 500px;
+            height: 80px;
+        }
+
+        #daftar {
+            padding: 5px;
+            border-radius: 10px;
+            background-color: blueviolet;
+            font-size: 30px;
+            width: 350px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form{
+            display: flex;
+
+        }
+
+        #status {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hapus {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
 
     <title>Hello, world!</title>
 </head>
@@ -56,25 +104,54 @@ if (isset($_POST['submit'])) {
             <div class="listdaftar">
                 <?php
                 if (isset($ID)) {
-                    $sql = "select list,status from daftarlist where id_user = '$ID'";
+                    $sql = "select id_list,list,status from daftarlist where id_user = '$ID'";
 
                     $result = $db->Query($sql);
 
                     if ($result->num_rows > 0) {
-                        for ($i=0; $i < 7; $i++) { 
-                            ?>
-                                <div id="daftar">cek</div>
-                            <?php
+                        while ($row = $result->fetch_assoc()) {
+                ?>
+                            <div class="bungkus" id="bungkus_<?php echo $row["id_list"]?>">
+                                <?php
+                                    if($row['status'] == 'simpan'){
+                                        ?>
+                                            <div id="daftar"><?php echo $row["list"]; ?></div>
+                                        <?php
+                                    }else if($row['status'] == 'Selesai'){
+                                        ?>
+                                            <div id="daftar"><del><?php echo $row["list"]; ?></del></div>
+                                        <?php
+                                    }
+                                ?>
+                                <form action="main.php" method="post">
+                                    <input type="hidden" name="listdel" value="<?php echo $row['id_list']; ?>">
+                                    <button type="submit" class="btn btn-primary ml-2" name="selesai" id="status">Selesai</button>
+                                    <button type="submit" class="btn btn-primary ml-2" name="haps" id="hapus">Hapus</button>
+                                </form>
+                            </div>
+                <?php
                         }
                     }
                 }
+                if (isset($_POST['haps'])) {
+                    $listDel = $_POST['listdel'];
+
+                    $sql = "DELETE FROM daftarlist WHERE id_list = '$listDel'";
+                    $result = $db->Query($sql);
+                }
+
+                if(isset($_POST['selesai'])){
+                    $listDel = $_POST['listdel'];
+
+                    $sql = "UPDATE daftarlist SET status = 'Selesai' WHERE id_list = '$listDel'";
+                    $result = $db->Query($sql);
+
+                }
+
                 ?>
             </div>
         </div>
     </section>
-
-
-
 
 
 
