@@ -104,3 +104,33 @@ h5{
 }
 
 
+#todo-page{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.daftar{
+    display: flex;
+}
+
+
+#listpg{
+    border-radius: 10px;
+    gap: 10px;
+    width: 500px;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    box-shadow: rgb(54, 42, 42) 20px 20px 70px;
+}
+
+#listdaftar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
