@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
             align-items: center;
         }
 
-        form{
+        form {
             display: flex;
 
         }
@@ -111,23 +111,28 @@ if (isset($_POST['submit'])) {
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                 ?>
-                            <div class="bungkus" id="bungkus_<?php echo $row["id_list"]?>">
+                            <div class="bungkus" id="bungkus_<?php echo $row["id_list"] ?>">
                                 <?php
-                                    if($row['status'] == 'simpan'){
-                                        ?>
-                                            <div id="daftar"><?php echo $row["list"]; ?></div>
-                                        <?php
-                                    }else if($row['status'] == 'Selesai'){
-                                        ?>
-                                            <div id="daftar"><del><?php echo $row["list"]; ?></del></div>
-                                        <?php
-                                    }
+                                if ($row['status'] == 'simpan') {
                                 ?>
-                                <form action="main.php" method="post">
+                                    <div id="daftar"><?php echo $row["list"]; ?></div>
+                                    <form action="main.php" method="post">
+                                        <input type="hidden" name="listdel" value="<?php echo $row['id_list']; ?>">
+                                        <button type="submit" class="btn btn-primary ml-2" name="selesai" id="status">Selesai</button>
+                                        <button type="submit" class="btn btn-primary ml-2" name="haps" id="hapus">Hapus</button>
+                                    </form>
+                                <?php
+                                } else if ($row['status'] == 'Selesai') {
+                                ?>
+                                    <div id="daftar"><del><?php echo $row["list"]; ?></del></div>
+                                    <form action="main.php" method="post">
                                     <input type="hidden" name="listdel" value="<?php echo $row['id_list']; ?>">
-                                    <button type="submit" class="btn btn-primary ml-2" name="selesai" id="status">Selesai</button>
                                     <button type="submit" class="btn btn-primary ml-2" name="haps" id="hapus">Hapus</button>
                                 </form>
+                                <?php
+                                }
+                                ?>
+
                             </div>
                 <?php
                         }
@@ -138,14 +143,18 @@ if (isset($_POST['submit'])) {
 
                     $sql = "DELETE FROM daftarlist WHERE id_list = '$listDel'";
                     $result = $db->Query($sql);
+                    header("Location: " . $_SERVER['PHP_SELF']);
+                    exit();
                 }
 
-                if(isset($_POST['selesai'])){
+                if (isset($_POST['selesai'])) {
                     $listDel = $_POST['listdel'];
 
                     $sql = "UPDATE daftarlist SET status = 'Selesai' WHERE id_list = '$listDel'";
                     $result = $db->Query($sql);
 
+                    header("Location: " . $_SERVER['PHP_SELF']);
+                    exit();
                 }
 
                 ?>
@@ -155,7 +164,7 @@ if (isset($_POST['submit'])) {
 
 
 
-
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
