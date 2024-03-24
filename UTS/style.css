@@ -21,11 +21,24 @@ body {
     align-items: center;
 }
 
-#welcome::before{
+#welcome::before {
     position: absolute;
 }
 
-.navbar{
+
+@media screen and (min-width: 768px) {
+    .container-fluid{
+        margin-top: -7px;
+    }
+}
+
+#nav-off{
+    margin-bottom: 35px;
+}
+
+
+
+.navbar {
     position: relative;
     height: 60px;
     margin: 20px;
@@ -33,14 +46,15 @@ body {
     padding: 10px;
     /* background: url(foto/welcome/navbar.jpg); */
     color: white;
+    overflow: hidden;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     border: none;
     font-size: 1.25rem;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
     box-shadow: none;
     outline: none;
 }
@@ -79,4 +93,36 @@ body {
         width: 100%;
         visibility: visible;
     }
+}
+
+
+/* menu indonesia */
+
+#menuID {
+    height: fit-content;
+    width: 100%;
+    background-color: #212023;
+    padding-bottom: 20px;
+}
+
+#daftarID {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-top {
+    width: 300px;
+    height: 250px;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card.animated {
+    opacity: 1;
+    transform: translateY(0);
 }
