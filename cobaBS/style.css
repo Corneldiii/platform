@@ -1,43 +1,107 @@
 *,
-html{
-    padding: 0;
+html {
     margin: 0;
+    padding: 0;
 }
 
 body {
-    min-height: 5000px;
+    height: 3000px;
+    width: 100%;
+
 }
 
-.jumbotron{
-    background-color: #804a4a;
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #807d7d;
+}
+
+#welcome {
+    background: url(foto/welcome/wallpaperflare.com_wallpaper\ \(6\).jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    color: rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
 }
 
-.jumbotron img{
+#welcome::before {
+    position: absolute;
+}
+
+
+@media screen and (min-width: 768px) {
+    .container-fluid {
+        margin-top: -7px;
+    }
+}
+
+#nav-off {
+    margin-bottom: 35px;
+}
+
+
+
+.navbar {
+    position: relative;
+    height: 60px;
     margin: 20px;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: rgb(79, 58, 27);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    overflow: hidden;
 }
 
-#project{
-    background-color: #F7DED0;
-    
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
 }
 
-#con-contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
 }
 
-#contactme{
-    display: flex;
-    justify-content: center;
-    background-color: blue;
-    width: 500px;
-    height: 500px;
+.navbar-nav {
+    gap: 20px;
+}
+
+.nav-link {
+    color: #000000;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: black;
+}
+
+@media (min-width:991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        visibility: hidden;
+        background-color: #393a40;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        width: 100%;
+        visibility: visible;
+    }
 }

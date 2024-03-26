@@ -16,30 +16,31 @@
 <body>
   <!-- Navbar started -->
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #FFBE98">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <b>Corneldi</b>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        CORNELDIII</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#project">Project</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand" href="#">
+            CORNELDIII</a>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item mk-lg-2">
+              <a class="nav-link active" aria-current="page" href="#" style="color: black;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mk-lg-2" href="#menuID">Menu</a>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </nav>
@@ -48,191 +49,24 @@
 
   <!-- profil picture started-->
 
-  <section class="jumbotron">
-    <img src="foto/IMG20220430214038 (1).jpg" width="200" />
-
-    <h1 class="display-4 text-center">Aldian Octavius Soesanto</h1>
-    <p class="lead"">
-        Software Engineer | Web Developer
-      </p>
-
-      <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1"
-        d="M0,256L0,224L36.9,224L36.9,64L73.8,64L73.8,96L110.8,96L110.8,96L147.7,96L147.7,224L184.6,224L184.6,96L221.5,96L221.5,256L258.5,256L258.5,128L295.4,128L295.4,160L332.3,160L332.3,160L369.2,160L369.2,256L406.2,256L406.2,32L443.1,32L443.1,0L480,0L480,64L516.9,64L516.9,192L553.8,192L553.8,192L590.8,192L590.8,288L627.7,288L627.7,128L664.6,128L664.6,256L701.5,256L701.5,64L738.5,64L738.5,32L775.4,32L775.4,128L812.3,128L812.3,32L849.2,32L849.2,128L886.2,128L886.2,96L923.1,96L923.1,96L960,96L960,128L996.9,128L996.9,192L1033.8,192L1033.8,128L1070.8,128L1070.8,32L1107.7,32L1107.7,96L1144.6,96L1144.6,64L1181.5,64L1181.5,96L1218.5,96L1218.5,256L1255.4,256L1255.4,192L1292.3,192L1292.3,128L1329.2,128L1329.2,128L1366.2,128L1366.2,64L1403.1,64L1403.1,224L1440,224L1440,320L1403.1,320L1403.1,320L1366.2,320L1366.2,320L1329.2,320L1329.2,320L1292.3,320L1292.3,320L1255.4,320L1255.4,320L1218.5,320L1218.5,320L1181.5,320L1181.5,320L1144.6,320L1144.6,320L1107.7,320L1107.7,320L1070.8,320L1070.8,320L1033.8,320L1033.8,320L996.9,320L996.9,320L960,320L960,320L923.1,320L923.1,320L886.2,320L886.2,320L849.2,320L849.2,320L812.3,320L812.3,320L775.4,320L775.4,320L738.5,320L738.5,320L701.5,320L701.5,320L664.6,320L664.6,320L627.7,320L627.7,320L590.8,320L590.8,320L553.8,320L553.8,320L516.9,320L516.9,320L480,320L480,320L443.1,320L443.1,320L406.2,320L406.2,320L369.2,320L369.2,320L332.3,320L332.3,320L295.4,320L295.4,320L258.5,320L258.5,320L221.5,320L221.5,320L184.6,320L184.6,320L147.7,320L147.7,320L110.8,320L110.8,320L73.8,320L73.8,320L36.9,320L36.9,320L0,320L0,320Z">
-      </path></svg>
-  </section>
+  
 
   <!-- porfil picture end -->
 
   <!-- about started -->
-  <section id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col text-center" style="margin-top: 70px;">
-          <h2>About Me</h2>
-        </div>
-      </div>
-
-      <div class="row justify-content-center text-center m-3">
-        <div class="col-md-7">
-          <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="foto/aboutme/Pict on me.jpg" class="d-block w-100 " alt="..." height="500">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="foto/aboutme/Blue eyes.jpg" class="d-block w-100" alt="..." height="500">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="foto/aboutme/download (3).jpg" class="d-block w-100" alt="..." height="500">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="col-md-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eum quos laborum laboriosam magnam dolor
-          optio delectus qui ipsum porro quae, minus nemo, quia aliquam, in cupiditate adipisci ipsa alias soluta
-          molestiae a ratione repellendus consectetur mollitia. Aspernatur tenetur distinctio possimus, beatae facere
-          quisquam vero eum sint pariatur dignissimos. Necessitatibus tenetur quod, maxime similique molestiae sapiente
-          non debitis officiis quisquam earum expedita repudiandae esse voluptate culpa, in, accusamus veritatis enim
-          eaque nisi porro. Rem molestiae commodi dicta natus unde odit placeat at officia optio illo eum corrupti eius
-          provident fugiat fugit, quae hic debitis excepturi accusamus ducimus earum deserunt. Sunt!
-        </div>
-      </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#F7DED0" fill-opacity="1" d="M0,288L0,0L110.8,0L110.8,64L221.5,64L221.5,64L332.3,64L332.3,
-        64L443.1,64L443.1,160L553.8,160L553.8,256L664.6,256L664.6,32L775.4,32L775.4,
-        224L886.2,224L886.2,64L996.9,64L996.9,160L1107.7,160L1107.7,288L1218.5,288L1218.5,
-        224L1329.2,224L1329.2,192L1440,192L1440,320L1329.2,320L1329.2,320L1218.5,320L1218.5,
-        320L1107.7,320L1107.7,320L996.9,320L996.9,320L886.2,320L886.2,320L775.4,320L775.4,
-        320L664.6,320L664.6,320L553.8,320L553.8,320L443.1,320L443.1,320L332.3,320L332.3,320L221.5
-        ,320L221.5,320L110.8,320L110.8,320L0,320L0,320Z"></path>
-    </svg>
-  </section>
+  
   <!-- about end -->
 
 
   <!-- project started -->
 
-  <section id="project">
-    <div class="continer">
-      <div class="row mb-5">
-        <div class="col text-center " style="margin-top: 55px;">
-          <h2>PROJECT</h2>
-        </div>
-      </div>
-
-      <div class="row gap-3" style="margin-left: 65px;">
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="foto/project/download (4).jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="foto/project/download (5).jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="foto/project/download (6).jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#ffff" fill-opacity="1"
-          d="M0,96L0,64L96,64L96,160L192,160L192,320L288,320L288,192L384,192L384,320L480,320L480,192L576,192L576,224L672,224L672,96L768,96L768,160L864,160L864,128L960,128L960,320L1056,320L1056,64L1152,64L1152,224L1248,224L1248,320L1344,320L1344,32L1440,32L1440,320L1344,320L1344,320L1248,320L1248,320L1152,320L1152,320L1056,320L1056,320L960,320L960,320L864,320L864,320L768,320L768,320L672,320L672,320L576,320L576,320L480,320L480,320L384,320L384,320L288,320L288,320L192,320L192,320L96,320L96,320L0,320L0,320Z">
-        </path>
-      </svg>
-    </div>
-
-  </section>
+ 
 
   <!-- project end -->
 
   <!-- contact started -->
 
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col text-center">
-          <h2>
-            CONTACT ME
-          </h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class=".col-md-6 .offset-md-3" id="con-contact">
-          <div id="contactme">
-            <form>
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                  else.</small>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
+  
   <!-- contact end -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
