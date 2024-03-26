@@ -97,7 +97,6 @@ btn.addEventListener('click', function () {
 
                 var mdlB = document.getElementById('mdlBody');
                 mdlB.innerHTML = '';
-                let pilihan = '';
 
                 let pilihan = '';
 
