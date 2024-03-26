@@ -70,6 +70,7 @@ p {
     /* background: url(foto/welcome/navbar.jpg); */
     color: white;
     overflow: hidden;
+    box-shadow: 0px 0px 35px rgb(86, 85, 85);
 }
 
 .navbar-toggler {
@@ -146,6 +147,8 @@ p {
     margin-top: -5px;
 }
 
+/* education */
+
 #riwayat {
     position: relative;
     height: 1500px;
@@ -198,14 +201,129 @@ p {
     position: absolute;
 }
 
+
+
 #sd,#sma {
     position: relative;
     top: -1050px;
-    left: -200px;
+    left: -250px;
+    opacity: 0;
+    /* animation: slideInLeft 1s ease-out; */
 }
 
 #smp,#kuliah {
     position: relative;
     top: -1050px;
-    right: -200px;
+    right: -250px;
+    opacity: 0;
+    /* animation: slideInRight 1s ease-out; */
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* memories */
+
+
+#memories{
+    width: 100%;
+    height: fit-content;
+}
+
+#cek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Cm{
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.Cm.animation{
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+/* Tugas */
+
+.screen{
+    margin-top: 30px;
+    border-radius: 20px;
+    border-style: groove;
+    border-color: rgb(188, 174, 174);
+    width: 400px;
+    height: 300px;
+    box-shadow: 0px 0px 35px rgb(86, 85, 85);
+    backdrop-filter: blur(20px);
+    
+}
+
+#tgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#Tugas{
+    width: 100%;
+    height: fit-content;
+    background-image: url(foto/welcome/Desain\ tanpa\ judul\ \(2\).jpg);
+}
+
+/* footer */
+
+#fot-a{
+    color: black;
+}
+
+#footer-container{
+    margin-bottom: 10px;
+    height: 50px;
+    display: flex;
+    gap: 20px;
+    background-color: #212023;
+    justify-content: center;
+    align-items: center;
+}
+
+#ig-icon:hover{
+    cursor: pointer;
+    color: antiquewhite;
+    transition: 0.3s ease-in-out;
+}
+#twit-icon:hover{
+    cursor: pointer;
+    color: antiquewhite;
+    transition: 0.3s ease-in-out;
+}
+#git-icon:hover{
+    cursor: pointer;
+    color: antiquewhite;
+    transition: 0.3s ease-in-out;
 }
